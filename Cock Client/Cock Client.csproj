@@ -62,6 +62,7 @@
     <Compile Include="Cock Client.Designer.cs">
       <DependentUpon>Cock Client.cs</DependentUpon>
     </Compile>
+    <Compile Include="memapi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cock Client.resx">

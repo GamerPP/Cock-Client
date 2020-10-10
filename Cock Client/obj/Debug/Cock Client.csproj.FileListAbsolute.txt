@@ -1,0 +1,13 @@
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\bin\Debug\Cock Client.exe
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\bin\Debug\Cock Client.pdb
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\bin\Debug\Memory.dll
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\bin\Debug\Memory.pdb
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\bin\Debug\Memory.xml
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\obj\Debug\Cock Client.csprojAssemblyReference.cache
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\obj\Debug\Cock_Client.Cock_Client.resources
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\obj\Debug\Cock_Client.Properties.Resources.resources
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\obj\Debug\Cock Client.csproj.GenerateResource.cache
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\obj\Debug\Cock Client.csproj.CoreCompileInputs.cache
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\obj\Debug\Cock Client.csproj.CopyComplete
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\obj\Debug\Cock Client.exe
+C:\Users\thecr\Documents\GitHub\Cock-Client\Cock Client\obj\Debug\Cock Client.pdb

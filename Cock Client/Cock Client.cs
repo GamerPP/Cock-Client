@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using mem;
+using System.Diagnostics;
 
 namespace Cock_Client
 {
@@ -34,12 +36,11 @@ namespace Cock_Client
             
         }
 
-        private void BGWorker_DoWork(object sender, DoWorkEventArgs e)
+        private async void BGWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             ProcOpen = m.OpenProcess("Minecraft.Windows.exe");
             if (!ProcOpen)
             {
-                Thread.Sleep(1000);
                 return;
             }
 
@@ -154,6 +155,7 @@ namespace Cock_Client
 
         private void Suicide_Click(object sender, EventArgs e)
         {
+
             m.WriteMemory("base+036A3EE8,0x8,0x18,0xA8,0x19C", "float", "1000");
         }
 
@@ -161,12 +163,22 @@ namespace Cock_Client
         {
             if (Fly.Checked)
             {
-                m.FreezeValue("base+36A3EE8,0x0,0x20,0x0xB8,0x8B8", "int", "1");
+                //while (Fly.Checked)
+                //{
+                //    Process proc = Process.GetProcessesByName("Minecraft.Windows")[0];
+                //    var hProc = memapi.OpenProcess(memapi.ProcessAccessFlags.All, false, proc.Id);
+                //    var modBase = memapi.GetModuleBaseAddress(proc.Id, "ac_client.exe");
+                //    var isFlyingAddr = memapi.FindDMAAddy(hProc, (IntPtr)(modBase + 0x036986F0), new int[] { 0x20, 0xF0, 0x10, 0x1F0, 0x30, 0x10, 0x8BD });
+                //    int flying = 1;
+                //    memapi.WriteProcessMemory(hProc, isFlyingAddr, flying, 4, out _);
+                //    await Task.Delay(50);
+                //}
+                m.FreezeValue("base+036A3EE8,0x20,0xF0,0x10,0x1F0,0x30,0x10,0x8B8", "int", "16777473");
             }
 
             else if (!Fly.Checked)
             {
-                m.UnfreezeValue("base+36A3EE8,0x0,0x20,0x0xB8,0x8B8");
+                //m.UnfreezeValue("base+36A3EE8,0x0,0x20,0x0xB8,0x8B8");
             }
         }
 
@@ -312,7 +324,7 @@ namespace Cock_Client
 
         private void ProcOpenLabel_TextChanged(object sender, EventArgs e)
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(10000);
             UserFOV.Text = m.ReadFloat("Minecraft.Windows.exe+03657E90,0x38,0x130,0xF0", "").ToString();
         }
 
@@ -335,7 +347,8 @@ namespace Cock_Client
                 "G - AirJump\n" +
                 "C - Zoom\n" +
                 "V - Speed\n" +
-                "R - TriggerBot");
+                "R - TriggerBot\n" +
+                "Y - Suicide");
         }
     }
 }
